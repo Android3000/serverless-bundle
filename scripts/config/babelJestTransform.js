@@ -3,7 +3,7 @@
 const babelJest = require("babel-jest");
 
 module.exports = babelJest.createTransformer({
-  presets: ["@babel/preset-env"],
+  presets: [["@babel/preset-env", {targets: {node: "current"}}]],
   plugins: [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-optional-chaining",
